@@ -37,6 +37,14 @@ app.post("/movies", (request, response) => {
     response.json("data berhasil ditambahkan")
 })
 
+app.delete("/movies/:id", (request, response) => {
+    const { id } = request.params
+
+    const movie = movies.find(item => (item.id == id))
+
+    response.json("data sudah dihapus");
+})
+
 app.listen(PORT, () => {
   console.log(`server running on port : ${PORT}`);
 })
