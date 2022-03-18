@@ -1,6 +1,4 @@
-const { response } = require("express")
 const express = require("express")
-const res = require("express/lib/response")
 const app = express()
 
 const PORT = process.env.PORT || 3000
